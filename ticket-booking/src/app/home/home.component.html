@@ -1,0 +1,18 @@
+<div class="container">
+    <div class='row'>
+        <h1> Ticket Booking </h1>
+        <a class='pull-right' routerLink='/admin'> Go to admin</a>
+    </div>
+
+    <div class='row'>
+      <div class="col-md-8">
+        <app-seat-hierarchy [seats]='seats' (resetEvent)='reset()'></app-seat-hierarchy>
+      </div>
+
+      <div class="col-md-4">
+        <app-seat-status [seats]='seats' (reset)='resetAction'></app-seat-status>
+        {{selectedSeatsCount}}
+        <app-calc-board [seats]='seats'></app-calc-board>
+      </div>
+    </div>
+</div>
