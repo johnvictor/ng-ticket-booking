@@ -1,5 +1,6 @@
 <div class="seat-table">
-
+		<span class="help-block" *ngIf="alreadyBooked">Already booked.  Can't edit!</span>
+		<span class="help-block success" *ngIf="bookedSuccess">Booked!</span>
 		<div class="row" *ngFor='let seat of seats'>
 			<div class="col-xs-1 rownum">
 				<label>{{seat.row}}</label>
@@ -13,8 +14,8 @@
 		</div>
 
 		<div class='row'>
-			<button type="button" class="btn btn-danger pull-right" (click)='reset()'>Reset</button>
-			<button type="button" class="btn btn-success pull-right" (click)='book()'>book</button>
+			<button type="button" class="btn btn-success pull-right reset" (click)='book()'>book</button>
+			<button type="button" class="btn btn-danger pull-right mt10" (click)='reset()'>Reset</button>
 		</div>
 
 </div>

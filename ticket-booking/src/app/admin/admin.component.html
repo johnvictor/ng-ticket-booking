@@ -29,11 +29,8 @@
                     type="number" 
                     id="seats" 
                     class="form-control"
-                    ngModel
-                    name="seats"
-                    #seats='ngModel'
-                    required>
-                    <span class="help-block" *ngIf="!seats.valid && seats.touched">Please enter valid seat number!</span>
+                    value=96
+                    disabled>
                 </div>
                 <div class="form-group">
                   <label for="location">Location</label>
@@ -48,6 +45,7 @@
                 </div>
               </div>
               <button class="btn btn-primary pull-right" type="submit" [disabled]="!f.valid">Submit</button>
+              <span class="help-block success" *ngIf="success">Added successfully!</span>
             </form>
           </div>
         </div>

@@ -12,6 +12,7 @@ import { SeatHierarchyComponent } from './home/seat-hierarchy/seat-hierarchy.com
 import { HighlightDirective } from './highlight.directive';
 import { CalculationService } from './calculation.service';
 import { AdminService } from './admin.service';
+import { TheatreService } from './theatre.service';
 import { RouterConfig } from './router.module';
 
 
@@ -29,9 +30,13 @@ import { RouterConfig } from './router.module';
     BrowserModule,
     RouterConfig,
     FormsModule,
-    HttpModule
+    HttpModule,
+
   ],
-  providers: [CalculationService, AdminService],
+  providers: [
+    CalculationService, 
+    AdminService,
+    TheatreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

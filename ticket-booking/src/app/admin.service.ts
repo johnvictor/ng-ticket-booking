@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
 import { Headers, Http, Response } from '@angular/http';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class AdminService {
@@ -9,7 +10,7 @@ export class AdminService {
   constructor(private http: Http) { }
 
   add(request) {
-  	this.http.post("url" + request.path, request.data, {
+  	return this.http.post(environment.serviceUrl + request.path, request.data, {
   		headers: this.headers
   	}).map(
       (response: Response) => {

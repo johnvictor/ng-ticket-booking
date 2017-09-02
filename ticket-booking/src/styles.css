@@ -68,10 +68,23 @@ label {
 h1 {
 	text-align: center;
 	background-color: green;
-	color: red;
+	color: #fcf8e3;
 	font-weight: bold;
 }
 
 .help-block {
   color: red;
+}
+
+.success {
+  color: green;
+}
+
+.reset {
+  margin-right: 134px;
+  margin-top: 10px;
+}
+
+.mt10 {
+    margin: 10px 5px 0 0;
 }
